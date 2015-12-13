@@ -1,8 +1,5 @@
 export TERM="xterm-256color"
 
-# sets up proper alias commands when called
-alias ls='ls --color'
-alias ll='ls -hla'
 
 export DEFAULT_USER=`whoami`
 
@@ -57,3 +54,6 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 # Tell antigen that you're done.
 antigen apply
 
+# sets up proper alias commands when called
+alias ls='ls --color'
+alias ll='ls -hla'
