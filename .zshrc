@@ -1,7 +1,9 @@
 export TERM="xterm-256color"
 
-
 export DEFAULT_USER=`whoami`
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export WORKON_HOME=~/Envs
 
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
