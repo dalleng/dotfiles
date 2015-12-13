@@ -20,6 +20,7 @@ Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 call vundle#end()
 
@@ -50,6 +51,7 @@ set nobackup            " no more backup file
 set nowritebackup       " change save behavior to avoid using the backup file
 set clipboard=unnamed   " compatible with system clipboard
 set mouse=a             " enables mouse (scrolling, selection, etc.)
+set autoread            " autoread file on change
 
 
 "set colorcolumn=80   " highlights the 80th column
