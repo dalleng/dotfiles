@@ -13,6 +13,9 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
 export PATH=/Users/diegoallen/Library/Android/sdk/build-tools:$PATH
 
+HISTSIZE=100000
+SAVEHIST=100000
+
 # use gnu coreutils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
