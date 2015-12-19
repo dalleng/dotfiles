@@ -21,6 +21,7 @@ Plugin 'bling/vim-airline'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()
 
@@ -96,7 +97,8 @@ filetype plugin on
 " ------ Keyboard Mappings ------
 
 " Toggles NERDTree on/off
-map <leader><leader> :NERDTreeToggle<CR>
+map <leader><leader> :NERDTreeTabsToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
