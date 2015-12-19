@@ -49,6 +49,7 @@ antigen bundle django
 antigen bundle httpie
 antigen bundle vagrant
 antigen bundle autojump
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
