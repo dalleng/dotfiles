@@ -5,6 +5,12 @@ export DEFAULT_USER=`whoami`
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export WORKON_HOME=~/Envs
 
+# Default editor
+export EDITOR=vim
+
+# Use MacVim's vim
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -32,6 +38,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Add android tools
 export PATH="$PATH:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools"
+
+# use antigen to manage zsh plugins
 source /Users/diegoallen/.antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
