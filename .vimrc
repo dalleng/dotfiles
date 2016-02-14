@@ -22,6 +22,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()
 
