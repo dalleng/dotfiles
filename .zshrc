@@ -11,6 +11,9 @@ export EDITOR=vim
 # Use MacVim's vim
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
+# Open sourcetree
+alias st='open -a SourceTree'
+
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
