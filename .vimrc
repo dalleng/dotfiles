@@ -66,6 +66,9 @@ endif
 
 " ------ Settings according to filetype ------
 
+autocmd FileType htmldjango
+  \ setlocal shiftwidth=2 |
+  \ setlocal tabstop=2 |
 autocmd FileType html
   \ setlocal shiftwidth=2 |
   \ setlocal tabstop=2 |
@@ -73,8 +76,8 @@ autocmd FileType css
   \ setlocal shiftwidth=2 |
   \ setlocal tabstop=2 |
 autocmd FileType javascript
-  \ setlocal shiftwidth=4 |
-  \ setlocal tabstop=4
+  \ setlocal shiftwidth=2 |
+  \ setlocal tabstop=2
 autocmd Filetype py
   \ set tabstop=4 |
   \ set shiftwidth=4
