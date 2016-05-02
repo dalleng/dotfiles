@@ -74,3 +74,5 @@ antigen apply
 # sets up proper alias commands when called
 alias ls='ls --color'
 alias ll='ls -hla'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
