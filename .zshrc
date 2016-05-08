@@ -24,6 +24,8 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
 export PATH=/Users/diegoallen/Library/Android/sdk/build-tools:$PATH
 
+setopt HIST_IGNORE_DUPS
+setopt  HIST_IGNORE_ALL_DUPS
 HISTSIZE=100000
 SAVEHIST=100000
 

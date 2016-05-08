@@ -60,9 +60,6 @@ set autoread            " autoread file on change
 hi ColorColumn ctermbg=grey guibg=springgreen
 
 set guifont=Monaco\ for\ Powerline:h10 " Sets Monaco as the font
-if has("gui_macvim")
-    set transparency=5
-endif
 
 " ------ Settings according to filetype ------
 
