@@ -123,3 +123,5 @@ endif
 " Jedi Vim
 " I don't want the docstring window to popup during completion
 autocmd FileType python setlocal completeopt-=preview
+" use tabs for go to defninitions
+let g:jedi#use_tabs_not_buffers=1
