@@ -21,8 +21,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 
 # add android utilities to path
-export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
-export PATH=/Users/diegoallen/Library/Android/sdk/build-tools:$PATH
+export ANDROID_HOME=/Users/diegoallen/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 setopt HIST_IGNORE_DUPS
 setopt  HIST_IGNORE_ALL_DUPS
@@ -40,9 +41,6 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# Add android tools
-export PATH="$PATH:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools"
 
 # use antigen to manage zsh plugins
 source /Users/diegoallen/.antigen/antigen.zsh
