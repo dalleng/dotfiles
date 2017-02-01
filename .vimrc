@@ -23,6 +23,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'posva/vim-vue'
 
 call vundle#end()
 
@@ -59,7 +60,7 @@ set autoread            " autoread file on change
 "set colorcolumn=80   " highlights the 80th column
 hi ColorColumn ctermbg=grey guibg=springgreen
 
-set guifont=Monaco\ for\ Powerline:h10 " Sets Monaco as the font
+set guifont=Monaco\ for\ Powerline:h11 " Sets Monaco as the font
 
 " ------ Settings according to filetype ------
 
@@ -73,6 +74,9 @@ autocmd FileType css
   \ setlocal shiftwidth=2 |
   \ setlocal tabstop=2 |
 autocmd FileType javascript
+  \ setlocal shiftwidth=2 |
+  \ setlocal tabstop=2
+autocmd FileType vue
   \ setlocal shiftwidth=2 |
   \ setlocal tabstop=2
 autocmd Filetype py
