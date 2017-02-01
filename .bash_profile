@@ -44,8 +44,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 
 # add android utilities to path
-export PATH=/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
-export PATH=/Users/diegoallen/Library/Android/sdk/build-tools:$PATH
+export ANDROID_HOME=/Users/diegoallen/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # use gnu coreutils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -67,9 +68,6 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# Add android tools
-export PATH="$PATH:/Applications/Android Studio.app/sdk/platform-tools:/Applications/Android Studio.app/sdk/tools"
 
 # The next line enables shell command completion for gcloud.
 source '/Users/diegoallen/google-cloud-sdk/completion.bash.inc'
