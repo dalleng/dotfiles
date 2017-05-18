@@ -14,6 +14,9 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # Open sourcetree
 alias st='open -a SourceTree'
 
+# clear
+alias cl='clear'
+
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -76,3 +79,6 @@ alias ls='ls --color'
 alias ll='ls -hla'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
+
