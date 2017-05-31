@@ -21,7 +21,7 @@ alias cl='clear'
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # add postgres.app bin dir to path
-export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
+/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # add android utilities to path
 export ANDROID_HOME=/Users/diegoallen/Library/Android/sdk
