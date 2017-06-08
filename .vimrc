@@ -25,6 +25,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'posva/vim-vue'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'mkitt/tabline.vim'
 
 call vundle#end()
 
