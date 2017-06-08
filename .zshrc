@@ -21,7 +21,7 @@ alias cl='clear'
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # add postgres.app bin dir to path
-/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # add android utilities to path
 export ANDROID_HOME=/Users/diegoallen/Library/Android/sdk
@@ -81,4 +81,5 @@ alias ll='ls -hla'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
+export PATH="$HOME/Applications/bin:$PATH"
 
