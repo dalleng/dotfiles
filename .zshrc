@@ -2,7 +2,7 @@ export TERM="screen-256color"
 
 export DEFAULT_USER=`whoami`
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=~/Envs
 
 # Default editor
@@ -16,6 +16,9 @@ alias st='open -a SourceTree'
 
 # clear
 alias cl='clear'
+
+# use ccat instead of cat
+alias cat='ccat'
 
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -63,6 +66,8 @@ antigen bundle django
 antigen bundle httpie
 antigen bundle vagrant
 antigen bundle autojump
+antigen bundle docker
+antigen bundle docker-compose
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
@@ -82,4 +87,3 @@ alias ll='ls -hla'
 
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 export PATH="$HOME/Applications/bin:$PATH"
-
