@@ -87,3 +87,6 @@ alias ll='ls -hla'
 
 export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
 export PATH="$HOME/Applications/bin:$PATH"
+
+# open chrome from cli
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
