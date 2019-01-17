@@ -90,3 +90,7 @@ export PATH="$HOME/Applications/bin:$PATH"
 
 # open chrome from cli
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+# enable pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

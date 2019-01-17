@@ -26,6 +26,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'posva/vim-vue'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mkitt/tabline.vim'
+Plugin 'ambv/black'
 
 call vundle#end()
 
