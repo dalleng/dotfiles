@@ -78,3 +78,13 @@ source '/Users/diegoallen/google-cloud-sdk/path.bash.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/diegoallen/google-cloud-sdk/completion.bash.inc'
 
+# Add rusts' cargo binaries
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# fzf script
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# set up node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
