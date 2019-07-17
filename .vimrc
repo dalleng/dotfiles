@@ -132,3 +132,10 @@ endif
 autocmd FileType python setlocal completeopt-=preview
 " use tabs for go to defninitions
 let g:jedi#use_tabs_not_buffers=1
+
+" Ignore node_modules folder and vcs folders
+set wildignore+=*/node_modules/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ }
