@@ -2,9 +2,6 @@ export TERM="screen-256color"
 
 export DEFAULT_USER=`whoami`
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=~/Envs
-
 # Default editor
 export EDITOR=vim
 
@@ -57,7 +54,6 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle pip
-antigen bundle virtualenvwrapper
 antigen bundle virtualenv
 antigen bundle brew-cask
 antigen bundle brew

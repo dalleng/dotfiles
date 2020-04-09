@@ -28,11 +28,6 @@ export HISTFILESIZE=""
 export HISTCONTROL=ignoredups
 export HISTCONTROL=erasedups
 
-# virtualenvwrapper setup
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
-
 # locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
