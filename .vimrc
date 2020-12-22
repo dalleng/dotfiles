@@ -63,7 +63,7 @@ set autoread            " autoread file on change
 "set colorcolumn=80   " highlights the 80th column
 hi ColorColumn ctermbg=grey guibg=springgreen
 
-set guifont=Monaco\ for\ Powerline:h11 " Sets Monaco as the font
+set guifont=Fira\ Code:h11 " Sets Fira Code as the font
 
 " ------ Settings according to filetype ------
 
