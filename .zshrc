@@ -6,7 +6,10 @@ export DEFAULT_USER=`whoami`
 export EDITOR=vim
 
 # Use MacVim's vim
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# set autosuggest buffer max size
+typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
 
 # Open sourcetree
 alias st='open -a SourceTree'
@@ -38,15 +41,11 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
-# use gnu coreutils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # use antigen to manage zsh plugins
-source /Users/diegoallen/.antigen/antigen.zsh
+source /Users/diegoallen/src/dotfiles/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -81,9 +80,6 @@ alias ll='ls -hla'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$HOME/.fastlane/bin/fastlane_lib:$PATH"
-export PATH="$HOME/Applications/bin:$PATH"
-
 # open chrome from cli
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
@@ -95,3 +91,6 @@ eval "$(pyenv virtualenv-init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/diegoallen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
