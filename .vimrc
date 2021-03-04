@@ -133,7 +133,7 @@ autocmd FileType python setlocal completeopt-=preview
 " use tabs for go to defninitions
 let g:jedi#use_tabs_not_buffers=1
 
-" Ignore node_modules folder and vcs folders
+" Ignore node_modules folder and vcs folders in ctrlp
 set wildignore+=*/node_modules/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
@@ -141,3 +141,11 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:black_linelength=119
+
+" Run macro in multiple lines in Vim
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+    execute ":'<,'>normal @".nr2char(getchar())
+endfunction
