@@ -18,7 +18,7 @@ alias st='open -a SourceTree'
 alias cl='clear'
 
 # use ccat instead of cat
-alias cat='ccat'
+alias cat='bat'
 
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -52,6 +52,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle pyenv
 antigen bundle pip
 antigen bundle virtualenv
 antigen bundle brew-cask
@@ -66,7 +67,7 @@ antigen bundle docker-compose
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv anaconda)
 
 # Load the theme.
 antigen theme bhilburn/powerlevel9k powerlevel9k
