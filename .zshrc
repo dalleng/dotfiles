@@ -114,3 +114,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# enable history-substring-search
+# https://github.com/zsh-users/zsh-history-substring-search#
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# fd alias to include hidden files
+alias fd='fd -IH'
+
+# transform python's unittest output to dotted.module.path
+# ERROR: test_create_opportunity_calls_analytics_with_opp_form_experiment_enabled (paladin.opportunity.tests.test_api_mutations.OpportunityMutationCreateTest) => ERROR: paladin.opportunity.tests.test_api_mutations.OpportunityMutationCreateTest.test_create_opportunity_calls_analytics_with_opp_form_experiment_enabled
+# example: python manage.py test 2>&1 | pptest
+alias pptest="sed -E 's/(FAIL|ERROR): ([a-z_]+) \(([a-zA-z\.]+)\)/\1: \3\.\2/'"
+
