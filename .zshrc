@@ -140,6 +140,8 @@ unset __conda_setup
 # enable history-substring-search
 # https://github.com/zsh-users/zsh-history-substring-search#
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # fd alias to include hidden files
 alias fd='fd -IH'
