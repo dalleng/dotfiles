@@ -136,3 +136,4 @@ alias fd='fd -IH'
 # example: python manage.py test 2>&1 | pptest
 alias pptest="sed -E 's/(FAIL|ERROR): ([a-z_]+) \(([a-zA-z\.]+)\)/\1: \3\.\2/'"
 
+alias lg='lazygit'
