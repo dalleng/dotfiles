@@ -44,6 +44,9 @@ export MANPATH="/usr/local/man:$MANPATH"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Add go bin path to PATH
+export PATH="/Users/diegoallen/go/bin:$PATH"
+
 # use antigen to manage zsh plugins
 source /Users/diegoallen/src/dotfiles/antigen/antigen.zsh
 
