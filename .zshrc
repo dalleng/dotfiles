@@ -5,9 +5,6 @@ export DEFAULT_USER=`whoami`
 # Default editor
 export EDITOR=vim
 
-# Use MacVim's vim
- alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-
 # set autosuggest buffer max size
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
 
