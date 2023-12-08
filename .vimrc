@@ -59,7 +59,7 @@ set nowritebackup       " change save behavior to avoid using the backup file
 set clipboard=unnamed   " compatible with system clipboard
 set mouse=a             " enables mouse (scrolling, selection, etc.)
 set autoread            " autoread file on change
-
+set backspace=indent,eol,start " Configure Backspace key behavior for indent, end-of-line, and line start.
 
 "set colorcolumn=80   " highlights the 80th column
 hi ColorColumn ctermbg=grey guibg=springgreen
