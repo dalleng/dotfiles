@@ -20,6 +20,9 @@ alias cat='bat'
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# use hombebrew installed sqlite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 # add postgres.app bin dir to path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
