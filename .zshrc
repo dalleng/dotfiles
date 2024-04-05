@@ -8,9 +8,6 @@ export EDITOR=vim
 # set autosuggest buffer max size
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
 
-# Open sourcetree
-alias st='open -a SourceTree'
-
 # clear
 alias cl='clear'
 
