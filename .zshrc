@@ -31,6 +31,9 @@ export ANDROID_HOME=/Users/diegoallen/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+# add docker binaries from the Docker.app to PATH
+export PATH="$PATH:$HOME/.docker/bin"
+
 setopt HIST_IGNORE_DUPS
 setopt  HIST_IGNORE_ALL_DUPS
 HISTSIZE=100000
