@@ -14,6 +14,9 @@ alias cl='clear'
 # use ccat instead of cat
 alias cat='bat'
 
+# Add user scripts in the home bin folder to the PATH
+export PATH=$HOME/bin:$PATH
+
 # use homebrew installed apps instead of system defaults
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
