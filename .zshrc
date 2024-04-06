@@ -58,28 +58,23 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle pyenv
 antigen bundle pip
-antigen bundle virtualenv
-antigen bundle brew-cask
 antigen bundle brew
 antigen bundle colorize
 antigen bundle django
 antigen bundle httpie
-antigen bundle vagrant
 antigen bundle autojump
 antigen bundle docker
-antigen bundle docker-compose
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv anaconda)
-
-# Load the theme.
-antigen theme bhilburn/powerlevel9k powerlevel9k
-
-# Tell antigen that you're done.
+## Tell antigen that you're done.
 antigen apply
+
+# Initialize startship prompt
+eval "$(starship init zsh)"
+
+# Disable the virtualenv prompt since starship already shows the virtualenv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # sets up proper alias commands when called
 alias ls='ls --color'
@@ -89,38 +84,6 @@ alias ll='ls -hla'
 
 # open chrome from cli
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
-# enable pyenv
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-# set up node version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# place this after nvm initialization!
-# Calling nvm use automatically in a directory with a .nvmrc file
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/diegoallen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
@@ -140,3 +103,6 @@ alias fd='fd -IH'
 alias pptest="sed -E 's/(FAIL|ERROR): ([a-z_]+) \(([a-zA-z\.]+)\)/\1: \3\.\2/'"
 
 alias lg='lazygit'
+
+# Activate mise
+eval "$(/usr/local/bin/mise activate zsh)"
