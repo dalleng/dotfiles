@@ -106,3 +106,9 @@ alias lg='lazygit'
 
 # Activate mise
 eval "$(/usr/local/bin/mise activate zsh)"
+
+# Add ~/.local/bin to PATH
+export PATH=$HOME/.local/bin:$PATH
+
+# Avoid echoing command to output
+DISABLE_AUTO_TITLE="true"
