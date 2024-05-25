@@ -3,6 +3,8 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
+-- change the leader
+lvim.leader = ","
 -- Use jj to leave insert mode
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true})
 
@@ -10,3 +12,5 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true})
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
+-- Use the spacebar to clear highlights
+vim.api.nvim_set_keymap('n', '<Space>', ':nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true })
