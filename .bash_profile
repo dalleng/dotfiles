@@ -1,8 +1,8 @@
 # Default editor
 export EDITOR=vim
 
-# Use MacVim's vim
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+# Use lvim as vim
+alias vim='lvim'
 
 # enables color in the terminal bash shell export
 CLICOLOR=1

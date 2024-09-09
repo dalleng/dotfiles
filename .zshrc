@@ -2,11 +2,14 @@ export TERM="screen-256color"
 
 export DEFAULT_USER=`whoami`
 
-# Default editor
+# Default jditor
 export EDITOR=vim
 
 # set autosuggest buffer max size
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
+
+# lvim as vim
+alias vim='lvim'
 
 # clear
 alias cl='clear'
