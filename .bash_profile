@@ -1,8 +1,11 @@
 # Default editor
-export EDITOR=vim
+export EDITOR=lvim
 
 # Use lvim as vim
 alias vim='lvim'
+
+# include hidden files and files in .gitignore
+alias rg='rg --hidden --no-ignore'
 
 # enables color in the terminal bash shell export
 CLICOLOR=1
@@ -63,15 +66,6 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# The next line enables shell command completion for gcloud.
-source '/Users/diegoallen/google-cloud-sdk/completion.bash.inc'
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/diegoallen/google-cloud-sdk/path.bash.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/diegoallen/google-cloud-sdk/completion.bash.inc'
 
 # Add rusts' cargo binaries
 export PATH="$HOME/.cargo/bin:$PATH"
