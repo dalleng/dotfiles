@@ -3,7 +3,7 @@ export TERM="screen-256color"
 export DEFAULT_USER=`whoami`
 
 # Default jditor
-export EDITOR=vim
+export EDITOR=lvim
 
 # set autosuggest buffer max size
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
@@ -16,6 +16,9 @@ alias cl='clear'
 
 # use ccat instead of cat
 alias cat='bat'
+
+# include hidden files and files in .gitignore
+alias rg = 'rg --hidden --no-ignore'
 
 # Add user scripts in the home bin folder to the PATH
 export PATH=$HOME/bin:$PATH
