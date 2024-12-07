@@ -123,3 +123,6 @@ DISABLE_AUTO_TITLE="true"
 # -X: Prevents clearing the screen after exiting less.
 # --use-color: Ensures color support (if available). Useful for when you search with /<search_term>, default behavior is to use italics for matched terms which is awful.
 export LESS='-RX --use-color'
+
+# Added by Windsurf
+export PATH="/Users/diegoallen/.codeium/windsurf/bin:$PATH"
