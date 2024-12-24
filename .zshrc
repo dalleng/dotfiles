@@ -126,3 +126,29 @@ export LESS='-RX --use-color'
 
 # Added by Windsurf
 export PATH="/Users/diegoallen/.codeium/windsurf/bin:$PATH"
+
+# helper function to simplify the usage of debugpy
+function debugpy() {
+    local host
+    local port
+
+    # Check if the first argument is a valid IP address or hostname (assuming it's host)
+    if [[ "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ || "$1" == "localhost" ]]; then
+        host="$1"
+        port="${2:-5679}"  # Default port to 5679 if the second argument is not provided
+        shift 2  # Shift the first two arguments
+    else
+        # Use default host and port
+        host="0.0.0.0"
+        port="5679"
+    fi
+
+    # Construct the debugpy command
+    local cmd="python -m debugpy --wait-for-client --listen $host:$port $@"
+
+    # Print the command for debugging
+    echo "Executing: $cmd"
+
+    # Execute the command
+    eval $cmd
+}
