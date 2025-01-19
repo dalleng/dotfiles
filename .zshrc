@@ -2,7 +2,7 @@ export TERM="screen-256color"
 
 export DEFAULT_USER=`whoami`
 
-# Default jditor
+# Default editor
 export EDITOR=lvim
 
 # set autosuggest buffer max size
@@ -18,7 +18,7 @@ alias cl='clear'
 alias cat='bat'
 
 # include hidden files and files in .gitignore
-alias rg = 'rg --hidden --no-ignore'
+alias rg='rg --hidden --no-ignore'
 
 # Add user scripts in the home bin folder to the PATH
 export PATH=$HOME/bin:$PATH
