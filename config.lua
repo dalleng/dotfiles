@@ -14,3 +14,14 @@ lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
 -- Use the spacebar to clear highlights
 vim.api.nvim_set_keymap('n', '<Space>', ':nohlsearch<Bar>:echo<CR>', { noremap = true, silent = true })
+
+-- Stop the LSP client for .env files
+require("lspconfig").bashls.setup({
+  on_attach = function(client, bufnr)
+    if vim.fn.expand("%:t") == ".env" then
+      client.stop()
+    else
+      require("lvim.lsp").common_on_attach(client, bufnr)
+    end
+  end,
+})
