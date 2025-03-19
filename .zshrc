@@ -118,3 +118,8 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Avoid echoing command to output
 DISABLE_AUTO_TITLE="true"
+
+# -R: Allows raw control characters (for color output).
+# -X: Prevents clearing the screen after exiting less.
+# --use-color: Ensures color support (if available). Useful for when you search with /<search_term>, default behavior is to use italics for matched terms which is awful.
+export LESS='-RX --use-color'
