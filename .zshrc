@@ -58,8 +58,7 @@ export PATH="$HOMEBREW_PREFIX/heroku/bin:$PATH"
 export PATH="/Users/diegoallen/go/bin:$PATH"
 
 # use antigen to manage zsh plugins
-# source /Users/diegoallen/src/dotfiles/antigen/antigen.zsh
-source /opt/homebrew/share/antigen/antigen.zsh
+source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -87,8 +86,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # sets up proper alias commands when called
 alias ls='ls --color'
 alias ll='ls -hla'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
