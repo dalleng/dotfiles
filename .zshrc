@@ -1,5 +1,5 @@
 export TERM="screen-256color"
-export HOMEBREW_PREFIX="brew prefix $(brew --prefix)"
+export HOMEBREW_PREFIX="$(brew --prefix)"
 
 export DEFAULT_USER=`whoami`
 
