@@ -1,4 +1,5 @@
 export TERM="screen-256color"
+export HOMEBREW_PREFIX="brew prefix $(brew --prefix)"
 
 export DEFAULT_USER=`whoami`
 
@@ -24,10 +25,10 @@ alias rg='rg --hidden --no-ignore'
 export PATH=$HOME/bin:$PATH
 
 # use homebrew installed apps instead of system defaults
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 
 # use hombebrew installed sqlite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/sqlite/bin:$PATH"
 
 # add postgres.app bin dir to path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
@@ -46,12 +47,12 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 # use gnu coreutils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/man:$MANPATH"
+PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
+export MANPATH="$HOMEBREW_PREFIX/man:$MANPATH"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/heroku/bin:$PATH"
 
 # Add go bin path to PATH
 export PATH="/Users/diegoallen/go/bin:$PATH"
@@ -96,7 +97,7 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/diegoallen/Library/Caches/heroku/autocomplete/zs
 
 # enable history-substring-search
 # https://github.com/zsh-users/zsh-history-substring-search#
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
