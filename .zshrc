@@ -58,7 +58,8 @@ export PATH="$HOMEBREW_PREFIX/heroku/bin:$PATH"
 export PATH="/Users/diegoallen/go/bin:$PATH"
 
 # use antigen to manage zsh plugins
-source /Users/diegoallen/src/dotfiles/antigen/antigen.zsh
+# source /Users/diegoallen/src/dotfiles/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -71,7 +72,7 @@ antigen bundle colorize
 antigen bundle django
 antigen bundle httpie
 antigen bundle autojump
-antigen bundle docker
+# antigen bundle docker
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 ## Tell antigen that you're done.
@@ -88,6 +89,9 @@ alias ls='ls --color'
 alias ll='ls -hla'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # open chrome from cli
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
@@ -112,7 +116,7 @@ alias pptest="sed -E 's/(FAIL|ERROR): ([a-z_]+) \(([a-zA-z\.]+)\)/\1: \3\.\2/'"
 alias lg='lazygit'
 
 # Activate mise
-eval "$(/usr/local/bin/mise activate zsh)"
+# eval "$(/usr/local/bin/mise activate zsh)"
 
 # Add ~/.local/bin to PATH
 export PATH=$HOME/.local/bin:$PATH
