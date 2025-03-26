@@ -113,7 +113,7 @@ alias pptest="sed -E 's/(FAIL|ERROR): ([a-z_]+) \(([a-zA-z\.]+)\)/\1: \3\.\2/'"
 alias lg='lazygit'
 
 # Activate mise
-# eval "$(/usr/local/bin/mise activate zsh)"
+[ -x /usr/local/bin/mise ] && eval "$(/usr/local/bin/mise activate zsh)"
 
 # Add ~/.local/bin to PATH
 export PATH=$HOME/.local/bin:$PATH
