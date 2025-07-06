@@ -154,3 +154,8 @@ function debugpy() {
     # Execute the command
     eval $cmd
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/diegoallen/.lmstudio/bin"
+# End of LM Studio CLI section
+
