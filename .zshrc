@@ -159,3 +159,8 @@ function debugpy() {
 export PATH="$PATH:/Users/diegoallen/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# Git diff with bat
+batdiff() {
+    git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
+}
+
