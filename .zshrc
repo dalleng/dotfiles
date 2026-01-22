@@ -51,9 +51,6 @@ PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH="$HOMEBREW_PREFIX/man:$MANPATH"
 
-### Added by the Heroku Toolbelt
-export PATH="$HOMEBREW_PREFIX/heroku/bin:$PATH"
-
 # Add go bin path to PATH
 export PATH="/Users/diegoallen/go/bin:$PATH"
 
@@ -92,9 +89,6 @@ source <(fzf --zsh)
 
 # open chrome from cli
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/diegoallen/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # enable history-substring-search
 # https://github.com/zsh-users/zsh-history-substring-search#
