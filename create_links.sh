@@ -10,3 +10,4 @@ ln -s $(pwd)/starship.toml $HOME/.config/starship.toml
 ln -s $(pwd)/config.lua $HOME/.config/lvim/config.lua
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/config $HOME/Library/Application\ Support/com.mitchellh.ghostty/config 
+ln -s $(pwd)/solarized-light-ghostty $HOME/.config/ghostty/themes/solarized-light
