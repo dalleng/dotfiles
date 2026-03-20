@@ -41,5 +41,5 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
-theme = dark:catppuccin-mocha,light:Builtin Solarized Light
+theme = dark:catppuccin-mocha,light:solarized-light
 macos-option-as-alt = left
