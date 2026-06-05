@@ -4,6 +4,22 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$nats\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+${custom.git_worktree}\
+$all"""
+
 [character]
 success_symbol = '[➜](bold green)'
 
@@ -11,3 +27,13 @@ success_symbol = '[➜](bold green)'
 disabled = false
 format = '🕙[ $time ](bold green) '
 time_format = '%T'
+
+[package]
+disabled = true
+
+[custom.git_worktree]
+command = 'basename "$(git rev-parse --show-toplevel)"'
+when = 'git rev-parse --is-inside-work-tree'
+symbol = ' '
+format = '[$symbol$output]($style) '
+style = 'bold cyan'
