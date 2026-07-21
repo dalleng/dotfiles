@@ -205,6 +205,32 @@ killall ControlCenter
 
 
 # ===========================================================================
+# Desktop: disable "click wallpaper to reveal desktop"
+# ---------------------------------------------------------------------------
+# macOS Sonoma+ lets you click an empty area of the desktop wallpaper to
+# briefly hide all windows (Stage Manager-style reveal). This turns that off
+# so a stray click on the desktop doesn't send your windows flying away.
+#
+# Same toggle as System Settings > Desktop & Dock > "Click wallpaper to
+# reveal desktop".
+#
+# This is read by a dedicated `WindowManager` process (Stage Manager's
+# daemon, /System/Library/CoreServices/WindowManager.app) — NOT by Dock.
+# Restarting Dock alone leaves the already-running WindowManager process
+# holding its old cached value, so the click-to-reveal behavior keeps
+# happening until logout. Killing WindowManager (it respawns immediately)
+# is what actually applies the change.
+# ===========================================================================
+section "Desktop: disabling click wallpaper to reveal desktop"
+
+# Turn off click-to-reveal-desktop.
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+# Restart WindowManager so the change applies now.
+killall WindowManager
+
+
+# ===========================================================================
 # Appearance: enable Dark Mode
 # ---------------------------------------------------------------------------
 # Switches the system appearance to Dark. This is the same toggle as
