@@ -184,6 +184,27 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 
 # ===========================================================================
+# Menu Bar: show Bluetooth indicator
+# ---------------------------------------------------------------------------
+# Adds the Bluetooth icon to the menu bar (Control Center), same as toggling
+# System Settings > Control Center > Bluetooth > "Show in Menu Bar".
+#
+# The value is an NSNumber that also encodes position, but 18 is the standard
+# "always show" value Control Center itself writes when you flip that switch.
+#
+# Control Center owns this preference domain, so it needs `killall
+# ControlCenter` (below) to pick up the change and redraw the menu bar.
+# ===========================================================================
+section "Menu Bar: showing Bluetooth indicator"
+
+# Always show the Bluetooth icon in the menu bar.
+defaults write com.apple.controlcenter Bluetooth -int 18
+
+# Restart Control Center so the menu bar redraws with the new icon.
+killall ControlCenter
+
+
+# ===========================================================================
 # Appearance: enable Dark Mode
 # ---------------------------------------------------------------------------
 # Switches the system appearance to Dark. This is the same toggle as
