@@ -205,6 +205,25 @@ killall ControlCenter
 
 
 # ===========================================================================
+# Menu Bar: show seconds in the clock
+# ---------------------------------------------------------------------------
+# Adds a live ":SS" seconds counter to the menu bar clock, same as toggling
+# System Settings > Control Center > Clock Options > "Display the time with
+# seconds".
+#
+# The menu bar clock is drawn by SystemUIServer, so it needs `killall
+# SystemUIServer` (below) to pick up the change and redraw with seconds shown.
+# ===========================================================================
+section "Menu Bar: showing seconds in the clock"
+
+# Show seconds in the menu bar clock.
+defaults write com.apple.menuextra.clock ShowSeconds -bool true
+
+# Restart SystemUIServer so the menu bar clock redraws with seconds.
+killall SystemUIServer
+
+
+# ===========================================================================
 # Desktop: disable "click wallpaper to reveal desktop"
 # ---------------------------------------------------------------------------
 # macOS Sonoma+ lets you click an empty area of the desktop wallpaper to
