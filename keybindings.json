@@ -3,90 +3,94 @@
   {
     "key": "ctrl+k",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   {
     "key": "ctrl+j",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   {
     "key": "ctrl+1",
     "command": "workbench.action.terminal.focus",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus",
   },
   {
     "key": "ctrl+`",
     "command": "workbench.action.terminal.focus",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus",
   },
   {
     "key": "ctrl+`",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   {
     "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
+    "command": "workbench.action.navigateLeft",
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
+    "command": "workbench.action.navigateRight",
   },
   {
     "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
+    "command": "workbench.action.navigateUp",
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
+    "command": "workbench.action.navigateDown",
   },
   {
     "key": "cmd+escape",
-    "command": "workbench.action.closePanel"
+    "command": "workbench.action.closePanel",
   },
   {
     "key": "cmd+=",
-    "command": "editor.action.fontZoomIn"
+    "command": "editor.action.fontZoomIn",
   },
   {
     "key": "cmd+-",
-    "command": "editor.action.fontZoomOut"
+    "command": "editor.action.fontZoomOut",
   },
   {
     "key": "cmd+0",
-    "command": "editor.action.fontZoomReset"
+    "command": "editor.action.fontZoomReset",
   },
   {
     "key": "shift+cmd+.",
-    "command": "workbench.action.increaseViewSize"
+    "command": "workbench.action.increaseViewSize",
   },
   {
     "key": "shift+cmd+,",
-    "command": "workbench.action.decreaseViewSize"
+    "command": "workbench.action.decreaseViewSize",
   },
   {
     "key": "shift+cmd+.",
     "command": "-editor.action.inPlaceReplace.down",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly",
   },
   {
     "key": "shift+cmd+.",
     "command": "-breadcrumbs.toggleToOn",
-    "when": "!config.breadcrumbs.enabled"
+    "when": "!config.breadcrumbs.enabled",
   },
   {
     "key": "shift+cmd+.",
     "command": "-editor.action.accessibleViewGoToSymbol",
-    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown",
   },
   {
     "key": "shift+cmd+.",
     "command": "-breadcrumbs.focusAndSelect",
-    "when": "breadcrumbsPossible && breadcrumbsVisible"
+    "when": "breadcrumbsPossible && breadcrumbsVisible",
   },
   {
     "key": "alt+m",
-    "command": "workbench.action.toggleMaximizedPanel"
-  }
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
+  {
+    "key": "alt+l",
+    "command": "search.action.focusSearchList",
+  },
 ]
